@@ -24,7 +24,7 @@ Cuando clonamos un repositorio con un package.json podemos instalar en local las
 npm install
 ```
 
-1. Se han incluido en un archivo json `tasks-thunder-api-client.json` los test para probar con thunder todos los endpoint. Investiga como importar la colección en thunder
+2. Se han incluido en un archivo json `tasks-thunder-api-client.json` los test para probar con thunder todos los endpoint. Investiga como importar la colección en thunder
 
 Prueba la ruta definida para el health check (/ping) desde la colección importada de thunder
 
@@ -50,36 +50,35 @@ POST /tasks -> Registrar task
 PUT /tasks/:taskId -> Actualizar body de un task
 DELETE /tasks/:taskId -> Eliminar task
 
-**NOTA** : Los cambios persistirán en la RAM durante la ejecución del servidor. La base de datos será la constante db inicializada al principio del fichero.
+**NOTA1** : Los cambios persistirán en la RAM durante la ejecución del servidor. La base de datos será la constante db inicializada al principio del fichero.
 
 Cuando el servidor se apague y vuelva a levantarse los datos se reiniciarán.
 
 ```javascript
-const db = { tasks: [] }
+const db = { tasks: [] };
 ```
 
-2. Además de manipular la 'database' el servidor debe enviar una respuesta a cada request:
+**NOTA2**:
+NO CONFUNDIR LOS CAMBIOS EN LA DB CON LA RESPUESTA DEL REQUEST
+Por ejemplo: El delete debe borrar un recurso y devolver al cliente el objeto con toda la data que tenía el objeto borrado.\*\*
 
-**¡¡MPORTANTE!!!**
-\*\*NO CONFUNDIR LOS CAMBIOS EN LA DB CON LA RESPUESTA DEL REQUEST
-
-El delete debe borrar un recurso y devolver al cliente el objeto con toda la data que tenía el objeto borrado.\*\*
+**RESPUESTAS:** Además de manipular la 'database' el servidor debe enviar una respuesta a cada request:
 
 1. LISTAR TASKS:
    **REQUEST**: GET /tasks
    **RESPONSE**: JSON CON ARRAY DE TASKS (statusCode: 200)
 
 ```javascript
-;[
-	{
-		id: 151323,
-		body: 'Comprar platanos',
-	},
-	{
-		id: 2341151,
-		body: 'Comprar Fresas',
-	},
-]
+[
+  {
+    id: 151323,
+    body: "Comprar platanos",
+  },
+  {
+    id: 2341151,
+    body: "Comprar Fresas",
+  },
+];
 ```
 
 2.  **REQUEST**: GET /tasks/151323  
