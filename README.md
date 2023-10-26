@@ -53,8 +53,10 @@ DELETE /tasks/:taskId -> Eliminar task
 Cuando el servidor se apague y vuelva a levantarse los datos se reiniciarán.
 
 ```javascript
-const db = { tasks: [] };
+const db = { tasks: [] }
 ```
+
+**NOTA2:** Se han incluido en un archivo json `tasks-thunder-api-client.json` los test para probar con thunder todos los endpoint. Investiga como importar la colección en thunder
 
 2. Además de manipular la 'database' el servidor debe enviar una respuesta a cada request:
 
@@ -68,16 +70,16 @@ El delete debe borrar un recurso y devolver al cliente el objeto con toda la dat
    **RESPONSE**: JSON CON ARRAY DE TASKS (statusCode: 200)
 
 ```javascript
-[
-  {
-    id: 151323,
-    body: "Comprar platanos",
-  },
-  {
-    id: 2341151,
-    body: "Comprar Fresas",
-  },
-];
+;[
+	{
+		id: 151323,
+		body: 'Comprar platanos',
+	},
+	{
+		id: 2341151,
+		body: 'Comprar Fresas',
+	},
+]
 ```
 
 2.  **REQUEST**: GET /tasks/151323  

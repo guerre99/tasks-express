@@ -1,0 +1,117 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "tasks",
+    "dateExported": "2023-10-26T14:23:47.705Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "53c7435b-5521-45db-9827-b23c0f7e25d3",
+            "colId": "52596190-47e4-4a4a-8904-eb0e1c16f8e3",
+            "containerId": "",
+            "name": "/tasks",
+            "url": "localhost:4001/tasks",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-26T11:58:16.426Z",
+            "modified": "2023-10-26T14:18:47.157Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "476ae22e-15bf-41d0-8b7a-dc18d65fa6d2",
+            "colId": "52596190-47e4-4a4a-8904-eb0e1c16f8e3",
+            "containerId": "",
+            "name": "/tasks/:taskId",
+            "url": "localhost:4001/tasks",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-10-26T14:18:57.418Z",
+            "modified": "2023-10-26T14:18:57.418Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "eb1ac357-ada3-4543-98d8-21b07ce9a76b",
+            "colId": "52596190-47e4-4a4a-8904-eb0e1c16f8e3",
+            "containerId": "",
+            "name": "/tasks",
+            "url": "localhost:4001/tasks",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-26T11:59:26.937Z",
+            "modified": "2023-10-26T14:19:28.030Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"Comprar madalenas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8c813d5a-6b02-4f2c-8b02-73acca40c757",
+            "colId": "52596190-47e4-4a4a-8904-eb0e1c16f8e3",
+            "containerId": "",
+            "name": "/tasks/:taskId",
+            "url": "localhost:4001/tasks/12312411",
+            "method": "PUT",
+            "sortNum": 35000,
+            "created": "2023-10-26T14:19:39.006Z",
+            "modified": "2023-10-26T14:20:05.987Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"Comprar madalenas (updated)\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bf610779-f29c-4af1-83bc-b8ab6827adad",
+            "colId": "52596190-47e4-4a4a-8904-eb0e1c16f8e3",
+            "containerId": "",
+            "name": "/tasks/:taskId",
+            "url": "localhost:4001/tasks/12312411",
+            "method": "DELETE",
+            "sortNum": 36250,
+            "created": "2023-10-26T14:21:50.078Z",
+            "modified": "2023-10-26T14:22:04.870Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "68383374-4c51-46cd-94fd-60c478eb57f3",
+            "colId": "52596190-47e4-4a4a-8904-eb0e1c16f8e3",
+            "containerId": "",
+            "name": "/ping (health check)",
+            "url": "localhost:4001/ping",
+            "method": "GET",
+            "sortNum": 37500,
+            "created": "2023-10-26T14:20:26.593Z",
+            "modified": "2023-10-26T14:23:11.553Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4f8759f6-ca29-4899-8120-f94a645f6e61",
+            "colId": "52596190-47e4-4a4a-8904-eb0e1c16f8e3",
+            "containerId": "",
+            "name": "404",
+            "url": "localhost:4001/not-found",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-10-26T12:11:14.821Z",
+            "modified": "2023-10-26T14:23:06.703Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
