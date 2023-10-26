@@ -8,7 +8,7 @@ Crea un proyecto de node un repo especifico para esta iteración
 
 # Iteración 1
 
-FORKEA Y CLONA EL REPOSITORIO DEL RETO DEL DÍA
+1. FORKEA Y CLONA EL REPOSITORIO DEL RETO DEL DÍA
 
 El Repositorio tiene un package.json con dependencias incluidas. Es buena práctica configurar `.gitignore` para que los archivos fuentes de las dependencias no se suban a github.
 
@@ -20,15 +20,17 @@ node_modules
 
 Cuando clonamos un repositorio con un package.json podemos instalar en local las dependencias incluidas en él con el comando `npm install`. Esto descargará en nuestra carpeta todos los fuentes de las dependencias. (`node_modules`)
 
-```
+```bash
 npm install
 ```
 
-Prueba la ruta definida en el `server.js` enviando un request.
+1. Se han incluido en un archivo json `tasks-thunder-api-client.json` los test para probar con thunder todos los endpoint. Investiga como importar la colección en thunder
+
+Prueba la ruta definida para el health check (/ping) desde la colección importada de thunder
 
 GET /ping
 
-Si todo ha ido bien debe devolver el siguiente json `{message: pong} con un status code 200`
+Si todo ha ido bien devolverá el siguiente json `{message: pong} con un status code 200`
 
 ## Iteración 2
 
@@ -56,11 +58,9 @@ Cuando el servidor se apague y vuelva a levantarse los datos se reiniciarán.
 const db = { tasks: [] }
 ```
 
-**NOTA2:** Se han incluido en un archivo json `tasks-thunder-api-client.json` los test para probar con thunder todos los endpoint. Investiga como importar la colección en thunder
-
 2. Además de manipular la 'database' el servidor debe enviar una respuesta a cada request:
 
-¡¡MPORTANTE!!!
+**¡¡MPORTANTE!!!**
 \*\*NO CONFUNDIR LOS CAMBIOS EN LA DB CON LA RESPUESTA DEL REQUEST
 
 El delete debe borrar un recurso y devolver al cliente el objeto con toda la data que tenía el objeto borrado.\*\*
